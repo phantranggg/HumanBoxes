@@ -84,7 +84,7 @@ with torch.no_grad():
     priors = priors.to(device)
 # print("Prior shape: ", priors.shape)
 
-f = open('logs.csv', 'w', newline='')
+f = open('logs/logs_{}.csv'.format(args.config_name), 'w', newline='')
 writer = csv.writer(f)
 writer.writerow(["epoch", "iteration", "loss_l", "loss_c", "loss", "learning_rate"])
 

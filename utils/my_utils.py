@@ -2,6 +2,8 @@ import shutil
 import os
 from datetime import datetime
 import pandas as pd
+import cv2
+import json
 
 DEFAULT_TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 
@@ -115,6 +117,15 @@ def load_csv(path, **kwargs):
         print("Error when load csv data from ", path)
     return data
 
+def load_img(path):
+    return cv2.imread(path)
+
+def save_img(img, save_path):
+    cv2.imwrite(save_path, img)
+
+def save_json(data, path):
+    with open(path, 'w') as f:
+        json.dump(data, f)
 
 def copy_file(src_path, dst_path):
     try:
