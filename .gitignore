@@ -1,3 +1,8 @@
-data/
+data/MOT17_voc
+data/MOT17_voc_big
+data/MOT17Det
+data/CrowdHuman
+data/AFW
+data/millenium_bridge.mp4
 .vscode/
 *.pyc
